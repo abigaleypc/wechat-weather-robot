@@ -4,5 +4,4 @@
 
 ### 输出结果
 
-<video src="https://github.com/abigaleypc/wechat-weather-robot/blob/master/wxapp.mov?raw=true" controls="controls" autoplay="autoplay" loop="loop" style="width:50%;">
-</video>
+[点我](http://wechat.abigaleyu.co/public/sight.mp4)
