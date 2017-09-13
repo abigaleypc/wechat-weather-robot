@@ -1,0 +1,162 @@
+.page-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: '微软雅黑'
+}
+
+.msg-list {
+  padding-bottom: 60px;
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.clear-msg-list {
+  opacity: 0;
+  transform: scale(.1,.1) rotate(180deg);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+
+}
+.self,
+.friend {
+  display: flex;
+  padding: 10px;
+  width: 94%;
+}
+
+.self {
+  flex-direction: row-reverse;
+}
+
+.item-msg {
+  padding: 10px;
+  background: #fff;
+  max-width: 70%;
+  border: .2px solid #e2e2e2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+}
+
+.triangle {
+  position: relative;
+  width: 10px;
+}
+
+.b-triangle,
+.t-triangle {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+  display: inline;
+  border-style: solid;
+}
+
+.f-b-triangle {
+  border-width: 8px;
+  left: -5px;
+  top: 10px;
+  border-color: transparent #e2e2e2 transparent transparent;
+}
+
+.f-t-triangle {
+  border-width: 7px;
+  left: -3px;
+  top: 11px;
+  border-color: transparent #fff transparent transparent;
+}
+
+.s-b-triangle {
+  border-width: 8px;
+  left: 0px;
+  top: 10px;
+  border-color: transparent transparent transparent #e2e2e2;
+}
+
+.s-t-triangle {
+  border-width: 7px;
+  left: -1px;
+  top: 11px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.msg-input {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f8f8;
+}
+
+.send-input {
+  border: 1px solid #e2e2e2;
+  height: 33px;
+  float: left;
+  margin-right: 5px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 0 10px;
+}
+.btn{
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 15%;
+  height: 34px;
+  font-size: 16px;
+  line-height: 2;
+  margin: 0;
+  float: right;
+  background: #666;
+  color: #fff;
+}
+.send-btn {
+  margin-right: 6px;
+}
+.clear-btn {
+  margin-right: 17px;
+  
+}
+
+.dialog-box {
+  position: relative;
+}
+
+span {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.bot {
+  border-width: 15px;
+  border-style: solid dashed dashed;
+  border-color: transparent transparent #F9743A transparent;
+  left: 15px;
+  top: -29px;
+}
+
+.top {
+  border-width: 13px;
+  border-style: solid dashed dashed;
+  border-color: transparent transparent #fff transparent;
+  left: 17px;
+  top: -25px;
+}

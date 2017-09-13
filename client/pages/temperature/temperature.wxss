@@ -1,0 +1,89 @@
+view {
+  color:#666;
+}
+.temperatureView{
+  padding-bottom: 40px;
+  width: 100%;
+  overflow-x:hidden 
+}
+.header{
+  background: linear-gradient(to bottom , #bdd9fe,#f7ebff);
+  height: 160px;
+}
+.scroll-view{
+  padding: 10px 15px;
+  width: 100%;
+  overflow-x: hidden
+}
+.scroll-view_H{
+  white-space: nowrap; 
+  display: flex;
+  width: 90%;
+}
+.scroll-view-item_H{
+  display:inline-block;
+  background:rgba(255,255,255,.3);
+  margin-right:10px;
+  padding:10px;
+  border-radius:17px;
+  width:30%;
+  height:195rpx;
+  
+
+}
+.scroll-view-item_H_selected {
+  background:rgba(0,0,0,.03);
+}
+.scroll-view-item {
+  justify-content:center;
+  display:flex;
+  color: #888;
+  
+}
+.scroll-view-item_selected {
+  color: #555;
+  justify-content:center;
+  display:flex;
+  
+}
+.date-view{
+  font-size: 14px;
+}
+.temp-view{
+  font-size: 25px;
+}
+.weatherIcon{
+  width:30px;
+  height:24px;
+  padding-top:7px;  
+}
+.body{}
+.titleView{
+  height: 26px;
+  padding: 30px 15px 15px;
+}
+.title {
+  border-left:5px solid #bdd9fe;
+  padding-left:10px;
+  font-size:16px;
+}
+.contentView{
+  background:rgba(0,0,0,.05);
+  border-radius:6px;
+  margin:0 20px;
+  padding:10px 20px;
+  font-size: 14px;
+  
+}
+.contentItem{
+}
+.contentKeyText{
+  padding-right:15px;
+  color:#888;
+  width:126px;
+  display:inline-block;
+  
+}
+.contentValueText{
+  padding-right: 5px;
+}

@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/temperature/temperature",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "天气",
+        "iconPath": "image/tabBar/weather.png",
+        "selectedIconPath": "image/tabBarSelected/weather.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "机器人",
+        "iconPath": "image/tabBar/robot.png",
+        "selectedIconPath": "image/tabBarSelected/robot.png"
+      }
+    ]
+  }
+}

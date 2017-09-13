@@ -1,0 +1,34 @@
+<view class="page-body">
+  <!-- <view style="margin-bottom: 50px;"> -->
+    
+    <scroll-view class="{{touchClear?'clear-msg-list':'msg-list'}}" enable-back-to-top scroll-y="true" scroll-into-view='{{"v"+scrollPosition}}' style="height:{{clientHeight?clientHeight+'px':'auto'}}">
+      <view wx:for="{{msgList}}" wx:key="$index" id='{{"v"+index}}'>
+        <view wx:if="{{item.sender != 'robot'}}" class="self">
+          <view>
+              <image class="avatar" src="{{userInfo.avatarUrl}}" />
+          </view>
+          <view class="triangle">
+              <view class="b-triangle s-b-triangle"></view>
+              <view class="t-triangle s-t-triangle"></view>
+          </view>
+          <view class="item-msg">{{item.msg}}</view>
+        </view>
+        <view wx:else class="friend">
+          <view>
+              <image class="avatar" src="/image/robot/robot.png" />
+          </view>
+          <view class="triangle">
+              <view class="b-triangle f-b-triangle"></view>
+              <view class="t-triangle f-t-triangle"></view>
+          </view>
+          <view class="item-msg">{{item.msg}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  <!-- </view> -->
+    <view class="msg-input">
+      <input class="send-input" auto-focus bindinput="inputMsg" value="{{inputValue}}" />
+      <button class="btn clear-btn" bindtap="clear">清空</button>
+      <button class="btn send-btn" bindtap="send">发送</button>
+    </view>
+  </view>

@@ -1,0 +1,29 @@
+<view>
+    <loading hidden="{{loadComplete}}">
+        加载中...
+    </loading>
+  <view class="header">
+  
+      <view class="city">
+        <text>{{city.country}} - {{city.name}}</text>
+      </view>
+
+      <view class="tempDesc">
+        <view class="temperature" bindtap="onPressTemperature">{{temperature}}℃</view>
+        <image src='{{"/image/weather/"+description.strName+".png"}}' class="descImage"></image>
+      </view>
+  </view>
+  <view class="pannel" wx:for="{{currentWeather}}" wx:key="index" wx:if="{{item.num>0}}">
+    <view class="box" >
+      <view class="dataBox">
+
+        <text class="typeStr">{{item.type}}</text>
+        <view>
+          <text class="num"> {{item.num}}</text>
+          <text class="unit">{{item.unit}}</text>
+        </view>
+      </view>
+      <image class="imgCircle" src='{{"/image/weather"+index+".png"}}' mode='aspectFit'></image>
+    </view>
+  </view>
+</view>

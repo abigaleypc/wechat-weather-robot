@@ -1,0 +1,111 @@
+<view class="temperatureView">
+    <loading hidden="{{loadComplete}}">
+        加载中...
+    </loading>
+    <view class="header">
+        <view class="scroll-view">
+                <!-- <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+                        <view  class="scroll-view-item_H"
+                        bindtap="onChangeDate">
+                            <view class='scroll-view-item date-view'>
+                                <text>trewt</text>
+                            </view>
+                            <view class='scroll-view-item date-view'>
+                                <text>{terwtre℃</text>
+                            </view>
+        
+                            <view class="scroll-view-item temp-view">
+                                <image src='{{"/image/weather/"+item.weather+".png"}}' class="weatherIcon"></image>
+                            </view>
+        
+                        </view>
+                        <view  class="scroll-view-item_H"
+                        bindtap="onChangeDate">
+                        <view class='scroll-view-item date-view'>
+                                <text>trewt</text>
+                            </view>
+                            <view class='scroll-view-item date-view'>
+                                <text>{terwtre℃</text>
+                            </view>
+        
+                            <view class="scroll-view-item temp-view">
+                                <image src='{{"/image/weather/"+item.weather+".png"}}' class="weatherIcon"></image>
+                            </view>
+        
+                        </view>
+                        <view  class="scroll-view-item_H"
+                        bindtap="onChangeDate">
+                        <view class='scroll-view-item date-view'>
+                                <text>trewt</text>
+                            </view>
+                            <view class='scroll-view-item date-view'>
+                                <text>{terwtre℃</text>
+                            </view>
+        
+                            <view class="scroll-view-item temp-view">
+                                <image src='{{"/image/weather/"+item.weather+".png"}}' class="weatherIcon"></image>
+                            </view>
+        
+                        </view>
+                        <view  class="scroll-view-item_H"
+                        bindtap="onChangeDate">
+                        <view class='scroll-view-item date-view'>
+                                <text>trewt</text>
+                            </view>
+                            <view class='scroll-view-item date-view'>
+                                <text>{terwtre℃</text>
+                            </view>
+        
+                            <view class="scroll-view-item temp-view">
+                                <image src='{{"/image/weather/"+item.weather+".png"}}' class="weatherIcon"></image>
+                            </view>
+        
+                        </view>
+                        <view  class="scroll-view-item_H"
+                        bindtap="onChangeDate">
+                        <view class='scroll-view-item date-view'>
+                                <text>trewt</text>
+                            </view>
+                            <view class='scroll-view-item date-view'>
+                                <text>{terwtre℃</text>
+                            </view>
+        
+                            <view class="scroll-view-item temp-view">
+                                <image src='{{"/image/weather/"+item.weather+".png"}}' class="weatherIcon"></image>
+                            </view>
+        
+                        </view>
+                    </scroll-view> -->
+                <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll">
+                <view wx:for="{{temperatureList}}" wx:key="{{index}}" class="{{dateSelected==index?'scroll-view-item_H scroll-view-item_H_selected':'scroll-view-item_H'}}"
+                bindtap="onChangeDate" data-date="{{item.date}}" data-index="{{index}}">
+                    <view class="{{dateSelected==index?'scroll-view-item_selected date-view':'scroll-view-item date-view'}}">
+                        <text>{{item.date}}</text>
+                    </view>
+                    <view class="{{dateSelected==index?'scroll-view-item_selected temp-view':'scroll-view-item temp-view'}}">
+                        <text>{{item.temperature}}℃</text>
+                    </view>
+
+                    <view class="scroll-view-item temp-view">
+                        <image src='{{"/image/weather/"+item.weather+".png"}}' class="weatherIcon"></image>
+                    </view>
+
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="body">
+        <view wx:for='{{temperatureDetail}}' wx:key='{{"t"+index}}'>
+            <view class="titleView">
+                <text class="title">{{item.type}}</text>
+            </view>
+            <view class="contentView">
+                <view wx:for="{{item.content}}" wx:for-item="typeItem" wx:key='{{"i"+index}}'>
+                    <text class="contentKeyText">{{typeItem.key}}</text>
+                    <text class="contentValueText">{{typeItem.value}}</text>
+                    <text class="contentValueText">{{typeItem.unit}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
